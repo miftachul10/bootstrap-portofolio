@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jquery</title>
+    <script src="asset/js/jquery-3.5.1.full.js"></script>
+   <style>
+    .header{
+        border: 1px solid red;
+    }
+</style>
+
+</head>
+<body>
+    <div class="header"></div>
+
+    <!-- ini button -->
+
+    <button id="show">Tampilkan Gambar</button>
+    <button id="hide">Sembunyikan Tampilan Gambar</button>
+
+    <!-- elemen gambar -->
+
+    <div id="gambar">
+        <img id="load-gambar" src="asset/img/gambar4.jpg" alt="gagal" >
+    </div>
+
+    <!-- <script src="asset/js/jquery-3.5.1.slim.min.js"></script> -->
+    
+    <script>
+        $(document).ready(function(){
+           $(".header").html('Magelang');
+            $(".header").click(function(){
+                $(".header").css({"border":"1px solid blue"});
+            })
+        });
+
+    // Efek Animasi
+
+    // $("#gambar").html("<img id='load-gambar'></img>");
+
+    // $("#show").click(function(){
+    //     $('#load-gambar').attr({"src":'asset/img/gambar4.jpg',"width":"200px"});
+    // });
+    // $("#hide").click(function(){
+    //     $('#load-gambar').fadeOut();
+    // });
+
+        // cari di api jquery
+        
+    $("#load-gambar").hide();
+
+    $("#show").click(function(){
+        $('#load-gambar').fadeIn();
+    });
+    $("#hide").click(function(){
+        $("#load-gambar").fadeOut(3000);
+    });
+
+    </script>
+</body>
+</html>
